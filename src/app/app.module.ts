@@ -9,13 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './component/layout/header/header.component';
 import { SearchComponentComponent } from './component/search-component/search-component.component';
+import { UserCompoentComponent } from './component/user-compoent/user-compoent.component';
 
 @NgModule({
   // import de components
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchComponentComponent
+    SearchComponentComponent,
+    UserCompoentComponent
   ],
   // import de modules
   imports: [

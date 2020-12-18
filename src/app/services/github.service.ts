@@ -10,9 +10,7 @@ export class GithubService {
   
   constructor(private http: HttpClient) { }
 
-  // import HTTP MODULE
   getUser(userName:string) {
-    const res = this.http.get(`${BASE_URL}${userName}`)
-    return res
+    return this.http.get(`${BASE_URL}${userName}`)
   }
 }

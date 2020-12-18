@@ -8,17 +8,19 @@ import { GithubService } from './services/github.service';
 })
 export class AppComponent {  
   currentUser:any = null
-  loading = false
+  loading:boolean = false
 
   constructor(private ghService: GithubService) {}
 
   searchUser(userName:string) {
     this.loading = true
-    this.ghService.getUser(userName).subscribe(res => {this.currentUser = res; this.loading=false})
+    this.ghService.getUser(userName).subscribe(res => {
+      this.currentUser = res;
+      this.loading = false
+    })
   }
 
   clearSearch() {
     this.currentUser = null
-    // this.user = ""
   }
 }
