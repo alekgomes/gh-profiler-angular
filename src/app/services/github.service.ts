@@ -6,12 +6,13 @@ const BASE_URL = "https://api.github.com/users/"
   providedIn: 'root'
 })
 export class GithubService {
-  
-  currentUser = null
 
   constructor(private http: HttpClient) { }
 
   getUser(userName:string) {
-    return this.http.get(`${BASE_URL}${userName}`)
+    return new Promise((resolve, reject) => {
+      this.http.get(`${BASE_URL}${userName}`)
+        .subscribe((res:any) => resolve(res), (error:any) => resolve(error.error))
+    })
   }
 }
