@@ -5,6 +5,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './user-compoent.component.html',
   styleUrls: ['./user-compoent.component.scss']
 })
-export class UserCompoentComponent {
+export class UserComponent {
   @Input() currentUser:any
 }

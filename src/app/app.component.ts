@@ -1,26 +1,11 @@
 import { Component } from '@angular/core';
-import { GithubService } from './services/github.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {  
-  currentUser:any = null
-  loading:boolean = false
 
-  constructor(private ghService: GithubService) {}
+  constructor( ) {}
 
-  searchUser(userName:string) {
-    this.loading = true
-    this.ghService.getUser(userName).subscribe(res => {
-      this.currentUser = res;
-      this.loading = false
-    })
-  }
-
-  clearSearch() {
-    this.currentUser = null
-  }
 }

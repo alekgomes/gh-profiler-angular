@@ -2,12 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 const BASE_URL = "https://api.github.com/users/"
-
 @Injectable({
   providedIn: 'root'
 })
 export class GithubService {
   
+  currentUser = null
+
   constructor(private http: HttpClient) { }
 
   getUser(userName:string) {

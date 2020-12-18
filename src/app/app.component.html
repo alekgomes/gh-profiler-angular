@@ -1,10 +1,9 @@
 <app-header></app-header>
 
-<app-search-component (submit)= "searchUser($event)" (clear)="clearSearch()" [currentUser]="currentUser"></app-search-component>
+<!-- <app-search-component (submit)= "searchUser($event)" (clear)="clearSearch()" [currentUser]="currentUser"></app-search-component> -->
 
 <div class="container">
-  <mat-spinner *ngIf="loading"></mat-spinner>
+  <!-- <mat-spinner *ngIf="loading"></mat-spinner> -->
   <!-- <app-user-compoent [currentUser]="currentUser"></app-user-compoent> -->
   <router-outlet></router-outlet>
 </div>
-

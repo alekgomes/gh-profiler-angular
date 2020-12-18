@@ -4,22 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MaterialModule} from './material.module'
+import { MaterialModule } from './material.module'
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './component/layout/header/header.component';
-import { SearchComponent } from './component/search-component/search-component.component';
-import { UserCompoentComponent } from './component/user-compoent/user-compoent.component';
-import { AboutComponent } from './component/about/about.component';
-
+import { AboutComponent } from './about/about.component';
+// import { HomeComponent } from './home/home.component';
 @NgModule({
   // import de components
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchComponent,
-    UserCompoentComponent,
-    AboutComponent
+    AboutComponent,
   ],
   // import de modules
   imports: [
