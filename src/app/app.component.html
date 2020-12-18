@@ -4,6 +4,7 @@
 
 <div class="container">
   <mat-spinner *ngIf="loading"></mat-spinner>
-  <app-user-compoent [currentUser]="currentUser"></app-user-compoent>
+  <!-- <app-user-compoent [currentUser]="currentUser"></app-user-compoent> -->
+  <router-outlet></router-outlet>
 </div>
 

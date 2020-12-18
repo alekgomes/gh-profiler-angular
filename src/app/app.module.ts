@@ -8,16 +8,18 @@ import {MaterialModule} from './material.module'
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './component/layout/header/header.component';
-import { SearchComponentComponent } from './component/search-component/search-component.component';
+import { SearchComponent } from './component/search-component/search-component.component';
 import { UserCompoentComponent } from './component/user-compoent/user-compoent.component';
+import { AboutComponent } from './component/about/about.component';
 
 @NgModule({
   // import de components
   declarations: [
     AppComponent,
     HeaderComponent,
-    SearchComponentComponent,
-    UserCompoentComponent
+    SearchComponent,
+    UserCompoentComponent,
+    AboutComponent
   ],
   // import de modules
   imports: [

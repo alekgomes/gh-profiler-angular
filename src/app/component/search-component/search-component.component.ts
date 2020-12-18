@@ -4,7 +4,7 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
   templateUrl: './search-component.component.html',
   styleUrls: ['./search-component.component.scss']
 })
-export class SearchComponentComponent {
+export class SearchComponent {
   @Input() currentUser:any
   @Output() submit = new EventEmitter()
   @Output() clear = new EventEmitter()
