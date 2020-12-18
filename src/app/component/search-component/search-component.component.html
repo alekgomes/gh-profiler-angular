@@ -1,0 +1,10 @@
+<form (submit)="submit.emit(user)">
+  <mat-form-field class="searchUser" appearance="fill">  
+    <mat-label>Search user</mat-label>
+    <input matInput name="user" type="text" [(ngModel)]="user">
+    <button *ngIf="!currentUser; else resetBlock" type="button" type="submit" mat-button >Search</button>
+    <ng-template #resetBlock>
+      <button type="button" (click)="clearSearch()" mat-button >Clear</button>
+    </ng-template>
+  </mat-form-field>
+</form>

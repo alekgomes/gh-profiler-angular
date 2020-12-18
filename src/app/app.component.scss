@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.profileImage {
+  width: 100%;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-template-rows: 250px auto;  
+}
+
+.card {
+  padding: 12px 16px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  &__content {
+    padding: 8px 16px;
+
+    h3 {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    h4 {
+      color: rgba(0,0,0,.54);
+    }
+  }  
+}
+
+.githubLink {
+  padding: 4px 6px;  
+  background-color: #BABABA;
+  width: max-content;
+  border-radius: 6px;
+
+  a {
+    color: whitesmoke;
+  }
+}
+
+.badge {
+  display: inline-block;
+  width: max-content;
+  padding: 4px 6px;
+  color: whitesmoke;
+  border-radius: 6px;
+  margin-right: 1rem;
+  font-weight: bold;
+  font-size: .85rem;
+  margin-bottom: 1rem;
+  
+  &__warning{
+    background-color: tomato;    
+  }
+
+  &__success {
+    background-color: olivedrab;
+  }
+}
