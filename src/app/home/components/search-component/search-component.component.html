@@ -1,8 +1,8 @@
-<form (submit)="submit.emit(user)">
+<form #form="ngForm" (submit)="submit.emit(user)">
   <mat-form-field class="searchUser" appearance="fill">  
     <mat-label>Search user</mat-label>
-    <input matInput name="user" type="text" [(ngModel)]="user">
-    <button *ngIf="!currentUser; else resetBlock" type="button" type="submit" mat-button >Search</button>
+    <input matInput name="user" type="text" [(ngModel)]="user" required>
+    <button [disabled]="form.invalid" *ngIf="!currentUser; else resetBlock" type="button" type="submit" mat-button >Search</button>
     <ng-template #resetBlock>
       <button type="button" (click)="clear.emit()" mat-button >Clear</button>
     </ng-template>

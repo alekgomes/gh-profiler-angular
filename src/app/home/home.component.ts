@@ -13,13 +13,10 @@ export class HomeComponent {
 
   constructor(private ghService: GithubService) { }
 
-  search(userName:string) {
-    console.log(userName)
+  async search(userName:string) {
     this.handleLoading()
-    this.ghService.getUser(userName).subscribe(res => {
-      this.currentUser = res
-      this.handleLoading()
-    })
+    this.currentUser =  await this.ghService.getUser(userName)
+    this.handleLoading()
   }
 
   clear() {
